@@ -279,15 +279,15 @@ function handleDelete() {
 }
 
 // モーダルの外側をクリックした時の処理
-$(document).on('click', '.modal-overlay', function() {
+$(document).on('click', '.modal-overlay', () => {
     const modalId = $(this).parent().attr('id');
     closeModal(modalId);
 });
 
 // ESCキーでモーダルを閉じる
-$(document).on('keydown', function(e) {
+$(document).on('keydown', (e) => {
     if (e.key === 'Escape') {
-        $('.modal:visible').each(function() {
+        $('.modal:visible').each(() => {
             closeModal(this.id);
         });
     }
@@ -379,7 +379,7 @@ $(function() {
 });
 
 // クリーンアップ処理
-window.addEventListener('unload', function() {
+window.addEventListener('unload', () => {
     if (postsListener) {
         postsRef.off('value', postsListener);
         postsListener = null;
