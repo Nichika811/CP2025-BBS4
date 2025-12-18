@@ -507,3 +507,26 @@ textarea.form-control {
 .logged-out {
     display: none;
 }
+
+  
+
+.theme-purple{
+    background:#c496f5;
+    color:#730bc4;
+}
+
+.theme-red{
+    background:#df4747;
+    color:#e94dad;
+}
+
+.theme-blue{
+    background:#3b93f1;
+    color:#1a65af;
+}
+
+.theme-buttons button{
+    mergin-right: 5px;
+}
+
+
