@@ -528,6 +528,19 @@ window.addEventListener('unload', () => {
     }
 });
 //改良
+function setTheme(theme){
+    document.body.className = '';
+    document.body.classList.add(`theme-${theme}`);
+    localStorage.setItem('bbs-theme',theme);
+}
+
+$(function(){
+    const savedTheme = losalStorage.getItem('bbs-theme');
+    if(savedTheme){
+        setTheme(savedTheme);
+    }
+});
+
 
 
     </script>
